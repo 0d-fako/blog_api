@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Blog Post API",
+    "version": "1.0.0",
+    "description": "API for managing blog posts and authors"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/authors": {
+      "get": {
+        "summary": "Get all authors",
+        "responses": {
+          "200": {
+            "description": "List of authors"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create an author",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" }
+                },
+                "required": ["name"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Author created successfully"
+          }
+        }
+      }
+    },
+    "/posts": {
+      "post": {
+        "summary": "Create a blog post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "body": { "type": "string" },
+                  "author": { "type": "string", "description": "Author ID" }
+                },
+                "required": ["title", "body", "author"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Post created successfully"
+          }
+        }
+      }
+    }
+  }
+}
