@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5000"
+      "url": "https://blog-api-e183.onrender.com"
     }
   ],
   "paths": {
