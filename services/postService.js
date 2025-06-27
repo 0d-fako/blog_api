@@ -35,9 +35,7 @@ const updatePost = async (id, updateData) => {
   return updated;
 };
 
-/**
- * Delete a post by ID
- */
+
 const deletePost = async (id) => {
   const deleted = await deletePostById(id);
   if (!deleted) throw new Error('Post not found or delete failed');
