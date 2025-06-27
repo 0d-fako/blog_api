@@ -16,5 +16,10 @@
     "url": "https://github.com/0d-fako/blog_api/issues"
   },
   "homepage": "https://github.com/0d-fako/blog_api#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.0",
+    "mongodb": "^6.17.0"
+  }
 }
